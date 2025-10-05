@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Stiven García — Portafolio</title>
+<link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+<style>
+:root{
+  --bg:#f6fbff; /* very pale blue */
+  --card:#ffffff;
+  --accent:#a9d6ff; /* pastel blue */
+  --muted:#6b7280;
+  --glass: rgba(255,255,255,0.6);
+  --border: rgba(15,23,42,0.06);
+  --shadow: 0 6px 18px rgba(12,14,20,0.06);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg),#eef9ff 60%);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:48px 20px;
+}
+.container{
+  max-width:980px;
+  margin:0 auto;
+}
+.header{
+  display:flex;align-items:center;gap:16px;margin-bottom:18px
+}
+.avatar{
+  width:86px;height:86px;border-radius:12px;flex:0 0 86px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#d7f0ff);font-weight:700;color:#05345b;font-size:28px;border:1px solid var(--border);
+}
+.repo-title{
+  display:flex;flex-direction:column;gap:6px;
+}
+.repo-title h1{margin:0;font-size:20px}
+.repo-desc{color:var(--muted);font-size:13px}
+.badges{display:flex;gap:8px;align-items:center}
+.badge{background:var(--card);border:1px solid var(--border);padding:6px 8px;border-radius:10px;font-size:12px;color:var(--muted);box-shadow:var(--shadow)}
+.layout{display:grid;grid-template-columns:320px 1fr;gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.section-title h2{font-size:16px;margin:0}
+.section-small{color:var(--muted);font-size:13px}
+.profile-rows{display:flex;flex-direction:column;gap:8px}
+.kv{display:flex;justify-content:space-between;color:var(--muted);font-size:14px}
+.bio{margin-top:8px;color:#0b1220;line-height:1.5;font-size:14px}
+.flex-row{display:flex;gap:10px;flex-wrap:wrap}
+.social a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:linear-gradient(180deg,transparent, rgba(0,0,0,0.01));text-decoration:none;color:var(--muted);font-size:13px}
+.projects-list{display:flex;flex-direction:column;gap:12px}
+.project{border-radius:10px;padding:14px;border:1px solid rgba(10,20,30,0.04);background:linear-gradient(180deg,#fff,#fbfeff)}
+.project h3{margin:0;font-size:15px}
+.project p{margin:6px 0 10px;color:var(--muted);font-size:13px}
+.project .meta{font-family:var(--mono);font-size:12px;color:#0f172a;display:flex;gap:8px;flex-wrap:wrap}
+.code-sample{margin-top:10px;padding:12px;border-radius:8px;background:#f3fbff;border:1px solid rgba(10,40,70,0.04);font-family:var(--mono);font-size:13px;overflow:auto}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:transparent;resize:vertical}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#052238;text-decoration:none;font-weight:600;border:1px solid rgba(0,0,0,0.04)}
+.footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+/* responsive */
+@media (max-width:880px){
+  .layout{grid-template-columns:1fr}
+  .avatar{width:72px;height:72px}
+}
+/* small subtle animations */
+.fade-in{opacity:0;transform:translateY(6px);animation:fadeIn .6s forwards}
+@keyframes fadeIn{to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header fade-in">
+      <div class="avatar">SG</div>
+      <div class="repo-title">
+        <h1>Stiven García — Portafolio</h1>
+        <div class="repo-desc">Estudiante de Ingeniería en Software • Portafolio estilo GitHub</div>
+      </div>
+      <div style="margin-left:auto" class="badges">
+        <div class="badge">🧑‍💻 Estudiante</div>
+        <div class="badge">📍 Colombia</div>
+        <div class="badge">✨ Azul pastel</div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- LEFT COL -->
+      <aside class="card fade-in">
+        <div class="section-title"><h2>Perfil</h2><span class="section-small">Resumen</span></div>
+        <div class="profile-rows">
+          <div class="kv"><strong>Nombre</strong><span>Stiven García</span></div>
+          <div class="kv"><strong>Carrera</strong><span>Ingeniería en Software</span></div>
+          <div class="kv"><strong>Ubicación</strong><span>Colombia</span></div>
+          <div class="kv"><strong>Edad</strong><span>19</span></div>
+        </div>
+        <p class="bio">Soy estudiante de Ingeniería en Software con interés en desarrollo de aplicaciones, algoritmos en C++ y desarrollo web. Busco proyectos que me permitan aprender buenas prácticas, control de versiones y arquitectura limpia.</p>
+
+        <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+        <div class="section-title"><h2>Contacto</h2><span class="section-small">Redes</span></div>
+        <div class="social flex-row">
+          <a href="#" title="Facebook" aria-label="Facebook">🔗 Facebook</a>
+          <a href="#" title="Instagram" aria-label="Instagram">📷 Instagram</a>
+          <a href="#" title="X (Twitter)" aria-label="X">✳️ X</a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn">💼 LinkedIn</a>
+        </div>
+
+        <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+        <div class="section-title"><h2>Habilidades</h2><span class="section-small">Nivel</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="kv"><span>C++</span><span>Intermedio</span></div>
+          <div class="kv"><span>HTML / CSS / JS</span><span>Intermedio</span></div>
+          <div class="kv"><span>Git</span><span>Intermedio</span></div>
+          <div class="kv"><span>SQL</span><span>Básico</span></div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COL -->
+      <section>
+        <div class="card fade-in">
+          <div class="section-title"><h2>Proyectos</h2><span class="section-small">Algunos trabajos destacados</span></div>
+
+          <div class="projects-list">
+            <article class="project">
+              <h3>Gestor de Tareas (C++)</h3>
+              <p>Aplicación de consola hecha en C++ que permite crear, listar, editar y eliminar tareas guardadas en un archivo local. Incluye manejo básico de ficheros y estructuras.</p>
+              <div class="meta">Lenguaje: C++ • Archivos: filesystem • Estado: completo</div>
+
+              <pre class="code-sample"><code>// Ejemplo: función simple para añadir una tarea (C++)
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+
+void addTask(const std::string &filename, const std::string &task){
+  std::ofstream out(filename, std::ios::app);
+  if(!out) return; // manejo simple de errores
+  out << task << "\n";
+  out.close();
+}
+</code></pre>
+
+              <div style="margin-top:10px"><a class="btn" href="#">Ver repositorio</a></div>
+            </article>
+
+            <article class="project">
+              <h3>Página Personal (HTML / CSS / JS)</h3>
+              <p>Mi página web personal con diseño responsivo, formulario de contacto (simulado) y animaciones ligeras.</p>
+              <div class="meta">HTML • CSS • JavaScript</div>
+
+              <pre class="code-sample"><code>&lt;!-- snippet: formulario de contacto (HTML) --&gt;
+&lt;form id="contact" class="contact-form"&gt;
+  &lt;input placeholder="Tu nombre" /&gt;
+  &lt;input placeholder="Tu email" /&gt;
+  &lt;textarea placeholder="Mensaje" /&gt;
+&lt;/form&gt;
+</code></pre>
+              <div style="margin-top:10px"><a class="btn" href="#">Ver demo</a></div>
+            </article>
+
+            <article class="project">
+              <h3>Mini Calculadora (C++)</h3>
+              <p>Proyecto pequeño que resuelve operaciones básicas y muestra uso de funciones, referencias y manejo de errores.</p>
+              <div class="meta">C++ • Console</div>
+
+              <pre class="code-sample"><code>double add(double a,double b){ return a+b; }
+</code></pre>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="card fade-in" style="margin-top:16px">
+          <div class="section-title"><h2>Contacto & Envío de CV</h2><span class="section-small">Escríbeme</span></div>
+          <p class="section-small">Si quieres que te envíe mi CV o hablar de una oferta, usa el formulario (simulado) o los enlaces de redes.</p>
+
+          <form onsubmit="fakeSubmit(event)" class="contact-form">
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo" required />
+            <textarea rows="4" placeholder="Mensaje" required></textarea>
+            <div style="margin-top:10px"><button class="btn" type="submit">Enviar mensaje</button></div>
+          </form>
+        </div>
+
+      </section>
+    </main>
+
+    <div class="footer">¿Quieres que suba esto listo para GitHub (README + index.html)? Dime y lo preparo.</div>
+  </div>
+
+<script>
+function fakeSubmit(e){
+  e.preventDefault();
+  alert('Formulario simulado — guarda este archivo y reemplaza los enlaces con los tuyos.');
+}
+window.addEventListener('load',()=>document.querySelectorAll('.fade-in').forEach((el,i)=>el.style.animationDelay=(i*0.08)+'s'))
+</script>
+</body>
+</html>
