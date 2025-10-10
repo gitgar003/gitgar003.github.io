@@ -76,7 +76,11 @@ body{
 <body>
   <div class="container">
     <header class="header fade-in">
-      <div class="avatar">SG</div>
+      <div class="avatar">
+        <center>
+          <img src ="images/my.png" width="100%">
+        </center>
+      </div>
       <div class="repo-title">
         <h1>Stiven García — Portafolio</h1>
         <div class="repo-desc">Estudiante de Ingeniería en Software • Portafolio estilo GitHub</div>
@@ -84,7 +88,7 @@ body{
       <div style="margin-left:auto" class="badges">
         <div class="badge">🧑‍💻 Estudiante</div>
         <div class="badge">📍 Colombia</div>
-        <div class="badge">✨ Azul pastel</div>
+        <div class="badge">✨ TedA</div>
       </div>
     </header>
 
@@ -96,33 +100,33 @@ body{
           <div class="kv"><strong>Nombre</strong><span>Stiven García</span></div>
           <div class="kv"><strong>Carrera</strong><span>Ingeniería en Software</span></div>
           <div class="kv"><strong>Ubicación</strong><span>Colombia</span></div>
-          <div class="kv"><strong>Edad</strong><span>19</span></div>
+          <div class="kv"><strong>Edad</strong><span>19 años </span></div>
         </div>
-        <p class="bio">Soy estudiante de Ingeniería en Software con interés en desarrollo de aplicaciones, algoritmos en C++ y desarrollo web. Busco proyectos que me permitan aprender buenas prácticas, control de versiones y arquitectura limpia.</p>
+        <p class="bio">Soy estudiante de Ingeniería en Software con interés en desarrollo de aplicaciones y desarrollo web. Busco proyectos que me permitan aprender buenas prácticas, control de versiones y arquitectura limpia.</p>
 
         <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
         <div class="section-title"><h2>Contacto</h2><span class="section-small">Redes</span></div>
         <div class="social flex-row">
-          <a href="#" title="Facebook" aria-label="Facebook">🔗 Facebook</a>
-          <a href="#" title="Instagram" aria-label="Instagram">📷 Instagram</a>
-          <a href="#" title="X (Twitter)" aria-label="X">✳️ X</a>
-          <a href="#" title="LinkedIn" aria-label="LinkedIn">💼 LinkedIn</a>
+          <a href="#" title="Facebook" aria-label="Facebook"><h4>🔗Facebook</h4> <br> Stiven Garcia</a>
+          <a href="#" title="Instagram" aria-label="Instagram"><h4>📷Instagram</h4> <br> 0_garcia_stiven</a>
+          <a href="#" title="X (Twitter)" aria-label="X"><h4>✳️X </h4> @07GarciaTuti006</a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><h4>💼LinkedIn</h4> Stiven Garcia </a>
         </div>
 
         <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
         <div class="section-title"><h2>Habilidades</h2><span class="section-small">Nivel</span></div>
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div class="kv"><span>C++</span><span>Intermedio</span></div>
-          <div class="kv"><span>HTML / CSS / JS</span><span>Intermedio</span></div>
-          <div class="kv"><span>Git</span><span>Intermedio</span></div>
-          <div class="kv"><span>SQL</span><span>Básico</span></div>
+          <div class="kv"><span>C++</span><span>nulo</span></div>
+          <div class="kv"><span>HTML / CSS / JS</span><span>bajo</span></div>
+          <div class="kv"><span>Git</span><span>bajo</span></div>
+          <div class="kv"><span>SQL</span><span>nulo</span></div>
         </div>
       </aside>
 
       <!-- RIGHT COL -->
       <section>
         <div class="card fade-in">
-          <div class="section-title"><h2>Proyectos</h2><span class="section-small">Algunos trabajos destacados</span></div>
+          <div class="section-title"><h2>Proyectos</h2><span class="section-small">Algunos trabajos </span></div>
 
           <div class="projects-list">
             <article class="project">
@@ -130,17 +134,7 @@ body{
               <p>Aplicación de consola hecha en C++ que permite crear, listar, editar y eliminar tareas guardadas en un archivo local. Incluye manejo básico de ficheros y estructuras.</p>
               <div class="meta">Lenguaje: C++ • Archivos: filesystem • Estado: completo</div>
 
-              <pre class="code-sample"><code>// Ejemplo: función simple para añadir una tarea (C++)
-#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-#include &lt;string&gt;
-
-void addTask(const std::string &filename, const std::string &task){
-  std::ofstream out(filename, std::ios::app);
-  if(!out) return; // manejo simple de errores
-  out << task << "\n";
-  out.close();
-}
+              
 </code></pre>
 
               <div style="margin-top:10px"><a class="btn" href="#">Ver repositorio</a></div>
@@ -151,12 +145,7 @@ void addTask(const std::string &filename, const std::string &task){
               <p>Mi página web personal con diseño responsivo, formulario de contacto (simulado) y animaciones ligeras.</p>
               <div class="meta">HTML • CSS • JavaScript</div>
 
-              <pre class="code-sample"><code>&lt;!-- snippet: formulario de contacto (HTML) --&gt;
-&lt;form id="contact" class="contact-form"&gt;
-  &lt;input placeholder="Tu nombre" /&gt;
-  &lt;input placeholder="Tu email" /&gt;
-  &lt;textarea placeholder="Mensaje" /&gt;
-&lt;/form&gt;
+              
 </code></pre>
               <div style="margin-top:10px"><a class="btn" href="#">Ver demo</a></div>
             </article>
@@ -188,13 +177,13 @@ void addTask(const std::string &filename, const std::string &task){
       </section>
     </main>
 
-    <div class="footer">¿Quieres que suba esto listo para GitHub (README + index.html)? Dime y lo preparo.</div>
+    <div class="footer">GitHub</div>
   </div>
 
 <script>
 function fakeSubmit(e){
   e.preventDefault();
-  alert('Formulario simulado — guarda este archivo y reemplaza los enlaces con los tuyos.');
+  alert('Formulario');
 }
 window.addEventListener('load',()=>document.querySelectorAll('.fade-in').forEach((el,i)=>el.style.animationDelay=(i*0.08)+'s'))
 </script>
